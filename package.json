@@ -1,0 +1,22 @@
+{
+  "name": "bookmark-landing-page-angularjs",
+  "version": "1.0.0",
+  "description": "![Design preview for the Bookmark landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-livereload": "^0.1.3",
+    "grunt-contrib-watch": "^1.1.0",
+    "jit-grunt": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Katerina Makri",
+  "license": "ISC"
+}
