@@ -10,7 +10,10 @@
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+  
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  
   <!-- Main CSS -->
   <link rel="stylesheet" type="text/css" href="app/css/main.css">
 
@@ -18,21 +21,21 @@
 <body ng-app="app">
   <div class="wrapper">
     <header>
-      <img src="./app/images/logo-bookmark.svg">
-      
-      <nav class="d-flex justify-content-around">
-        <ul class="navbar-nav list-group-horizontal">
-          <li class="list-group-item border-0 letter-spacing"><a class="" href="#">FEATURES</a></li>
-          <li class="list-group-item border-0 letter-spacing"><a class="" href="#">PRICING</a></li>
-          <li class="list-group-item border-0 letter-spacing"><a class="" href="#">CONTACT</a></li>
-        </ul>
-        <a class="button btn-red letter-spacing" href="#">LOGIN</a>
-      </nav>  
+      <div class="container w-75 d-flex justify-content-between align-items-center">
+        <img src="./app/images/logo-bookmark.svg">
+
+        <nav class="d-flex justify-content-around align-items-center">
+          <a class="p-4" href="#">FEATURES</a>
+          <a class="p-4" href="#">PRICING</a>
+          <a class="p-4" href="#">CONTACT</a>
+          <a class="button btn-red letter-spacing" href="#">LOGIN</a>
+        </nav>
+      </div>
     </header>
     
     <main>
-      <section class="mt-5 padding-left d-flex justify-content-between">
-        <div class="w-50 d-flex flex-column justify-content-center ">
+      <section class="mt-5 w-75 container d-flex justify-content-between">
+        <div class="d-flex flex-column justify-content-center ">
           <h1 class="w-75 m-0">A Simple Bookmark Manager</h1>
           
           <p class="w-75 mt-4 mb-0">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
@@ -44,7 +47,7 @@
         </div>
         
         <!-- <div class="shape-right"></div> -->
-        <img class="img-fluid" src="./app/images/illustration-hero.svg">
+        <img class="img-fluid w-50" src="./app/images/illustration-hero.svg" />
       </section>
 
       <section class="mt-5">
@@ -57,15 +60,15 @@
         <div class="d-inline-block">
           <nav class="mt-5">
             <div class="nav justify-content-center" role="tablist">
-              <a class="p-4 nav-link border-bottom" data-toggle="tab" href="#bookmarking" role="tab">Simple Bookmarking</a>
-              <a class="p-4 nav-link border-bottom" data-toggle="tab" href="#searching" role="tab">Speedy Searching</a>
-              <a class="p-4 nav-link border-bottom" data-toggle="tab" href="#sharing" role="tab">Easy Sharing</a>
+              <a class="p-4 nav-link border-bottom red-onhover" data-toggle="tab" href="#bookmarking" role="tab">Simple Bookmarking</a>
+              <a class="p-4 nav-link border-bottom red-onhover" data-toggle="tab" href="#searching" role="tab">Speedy Searching</a>
+              <a class="p-4 nav-link border-bottom red-onhover" data-toggle="tab" href="#sharing" role="tab">Easy Sharing</a>
             </div>
           </nav>
 
           <div class="tab-content d-inline-block">
             <div id="bookmarking" class="mt-5 tab-pane fade show active padding-x d-flex justify-content-between" role="tabpanel">
-              <img class="img-fluid" src="./app/images/illustration-features-tab-1.svg">
+              <img class="img-fluid" src="./app/images/illustration-features-tab-1.svg" />
               <div class="w-50 d-flex flex-column justify-content-center">
                 <h3 class="w-75">Bookmark in one click</h3>
                 <p class="w-75">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
@@ -76,7 +79,7 @@
             </div>
 <!-- 
             <div id="searching" class="mt-5 tab-pane fade padding-x d-flex justify-content-between" role="tabpanel">
-              <img class="img-fluid" src="./app/images/illustration-features-tab-2.svg">
+              <img class="img-fluid" src="./app/images/illustration-features-tab-2.svg" />
               <div class="w-50 d-flex flex-column justify-content-center">
                 <h3 class="w-75">Intelligent search</h3>
                 <p class="w-75">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
@@ -87,7 +90,7 @@
             </div>
 
             <div id="sharing" class="mt-5 tab-pane fade padding-x d-flex justify-content-between" role="tabpanel">
-              <img class="img-fluid" src="./app/images/illustration-features-tab-3.svg">
+              <img class="img-fluid" src="./app/images/illustration-features-tab-3.svg" />
               <div class="w-50 d-flex flex-column justify-content-center">
                 <h3 class="w-75">Share your bookmarks</h3>
                 <p class="w-75">  Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
@@ -99,9 +102,116 @@
           </div>
         </div>
       </section>
+
+      <section class="mt-5">
+        <div class="container w-50 text-center">
+          <h2>Download the extension</h2>
+
+          <p class="m-0">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+        </div>
+
+        <div class="mt-5 container d-flex justify-content-center">
+          <div class="mb-6 card card-bg-img rounded-lg card-shadow justify-content-center align-items-center">
+            <div class="w-100 p-4 d-flex flex-column align-items-center">
+              <img src="./app/images/logo-chrome.svg" class="w-50 img-fluid" />
+              <h4 class="mt-4 mb-0">Add to Chrome</h4>
+              <p class="mt-2 card-text">Minimum version 62</p>
+            </div>
+
+            <div class="p-4">
+              <a href="#" class="button btn-blue">Add & Install Extension</a>  
+            </div>
+          </div>
+
+          <div class="mx-4 my-5 card card-bg-img rounded-lg card-shadow justify-content-center align-items-center">
+            <div class="w-100 p-4 d-flex flex-column align-items-center">
+              <img src="./app/images/logo-firefox.svg" class="w-50 img-fluid" />
+              <h4 class="mt-4 mb-0">Add to Firefox</h4>
+              <p class="mt-2 card-text">Minimum version 55</p>
+            </div>
+
+            <div class="p-4">
+              <a href="#" class="button btn-blue">Add & Install Extension</a>  
+            </div>
+          </div>
+
+          <div class="mt-6 card card-bg-img rounded-lg card-shadow justify-content-center align-items-center">
+            <div class="w-100 p-4 d-flex flex-column align-items-center">
+              <img src="./app/images/logo-opera.svg" class="w-50 img-fluid" />
+              <h4 class="mt-4 mb-0">Add to Opera</h4>
+              <p class="mt-2 card-text">Minimum version 46</p>
+            </div>
+
+            <div class="p-4">
+              <a href="#" class="button btn-blue">Add & Install Extension</a>  
+            </div>
+          </div>     
+      </section>
+
+      <section class="mt-5 container w-50 d-flex flex-column align-items-center">
+        <div class="text-center">
+          <h2>Frequently Asked Questions</h2>
+
+          <p class="m-0">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+        </div>
+
+        <div class="mt-5">
+          <div class="question-1">
+            <div class="question">
+              <p class="w-100 m-0 red-onhover">What is Bookmark?</p>
+              <button class="btn"><img src="./app/images/icon-arrow.svg" /></button>
+            </div>
+
+            <div class="answer">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+            </div>
+          </div>
+
+          <div class="question-1">
+            <div class="question">
+              <p class="w-100 m-0 red-onhover">What is Bookmark?</p>
+              <button class="btn"><img src="./app/images/icon-arrow.svg" /></button>
+            </div>
+
+            <div class="answer">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="mt-5 button btn-blue">More Info</button>
+      </section>
+
+      <section class="advertisement">
+        <div class=" w-50 py-5 container d-flex flex-column align-items-center text-white text-center">
+          <p class="m-0 letter-spacing-adv">35.000+ ALREADY JOINED</p>
+          <h2 class="w-75 mt-4 mb-0">Stay up-to-date with what we’re doing</h2>
+          <form class="mt-5">
+            <input type="text" class="input" name="email" placeholder="Enter your email address" />
+            <button class="button btn-red">Contact Us</button>
+          </form>
+        </div>
+      </section>
     </main>
     
-    <footer>footer</footer>
+    <footer>
+      <div class="container w-75 d-flex justify-content-between align-items-center text-white">
+        <div class="d-flex justify-content-between align-items-center text-white">
+          <img src="./app/images/logo-bookmark.svg" class="img-filter mr-5" />
+
+          <nav class="">
+            <a class="p-3" href="#">FEATURES</a>
+            <a class="p-3" href="#">PRICING</a>
+            <a class="p-3" href="#">CONTACT</a>
+          </nav>
+        </div>
+
+        <div class="icons">
+          <i class="fab fa-facebook-square mr-3"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <!-- Main Angular script -->
