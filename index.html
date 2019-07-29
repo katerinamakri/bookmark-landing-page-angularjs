@@ -21,7 +21,7 @@
 <body ng-app="app">
   <div class="wrapper">
     <header>
-      <div class="container w-75 d-flex justify-content-between align-items-center">
+      <div class="container w-75 py-4 d-flex justify-content-between align-items-center">
         <img src="./app/images/logo-bookmark.svg">
 
         <nav class="d-flex justify-content-around align-items-center">
@@ -50,68 +50,68 @@
         <img class="img-fluid w-50" src="./app/images/illustration-hero.svg" />
       </section>
 
-      <section class="mt-5">
+      <section class="mt-5" ng-controller="TabController">
         <div class="container w-50 text-center">
           <h2>Features</h2>
 
-          <p class="m-0">Our aim is to make it quick and easy for you to access your favourite websites.Your bookmarks sync between your devices so you can access them on the go.</p>
+          <p class="m-0 w-75 m-auto">Our aim is to make it quick and easy for you to access your favourite websites.Your bookmarks sync between your devices so you can access them on the go.</p>
         </div>
 
-        <div class="d-inline-block">
+        <div class="d-inline-block w-100">
           <nav class="mt-5">
             <div class="nav justify-content-center" role="tablist">
-              <a class="p-4 nav-link border-bottom red-onhover" data-toggle="tab" href="#bookmarking" role="tab">Simple Bookmarking</a>
-              <a class="p-4 nav-link border-bottom red-onhover" data-toggle="tab" href="#searching" role="tab">Speedy Searching</a>
-              <a class="p-4 nav-link border-bottom red-onhover" data-toggle="tab" href="#sharing" role="tab">Easy Sharing</a>
+              <a class="py-4 px-5 nav-link border-bottom red-onhover active" ng-model="bookmarking" href="#bookmarking" role="tab">Simple Bookmarking</a>
+              <a class="py-4 px-5 nav-link border-bottom red-onhover" ng-model="searching" href="#searching" role="tab">Speedy Searching</a>
+              <a class="py-4 px-5 nav-link border-bottom red-onhover" ng-model="sharing" href="#sharing" role="tab">Easy Sharing</a>
             </div>
           </nav>
 
-          <div class="tab-content d-inline-block">
-            <div id="bookmarking" class="mt-5 tab-pane fade show active padding-x d-flex justify-content-between" role="tabpanel">
-              <img class="img-fluid" src="./app/images/illustration-features-tab-1.svg" />
-              <div class="w-50 d-flex flex-column justify-content-center">
-                <h3 class="w-75">Bookmark in one click</h3>
-                <p class="w-75">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-                <div>
-                  <button class="btn-blue button">More Info</button>
-                </div>
-              </div>
-            </div>
-<!-- 
-            <div id="searching" class="mt-5 tab-pane fade padding-x d-flex justify-content-between" role="tabpanel">
-              <img class="img-fluid" src="./app/images/illustration-features-tab-2.svg" />
-              <div class="w-50 d-flex flex-column justify-content-center">
-                <h3 class="w-75">Intelligent search</h3>
-                <p class="w-75">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-                <div>
+          <div class="tab-content container">
+            <div id="bookmarking" class="mt-5 show active d-flex justify-content-between" ng-show="bookmarking" role="tabpanel">
+              <img class="w-40 img-fluid" src="./app/images/illustration-features-tab-1.svg" />
+              <div class="w-50 ml-5 d-flex flex-column justify-content-center">
+                <h3 class="w-75 mb-0">Bookmark in one click</h3>
+                <p class="w-75 mt-4 mb-0">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                <div class="mt-4">
                   <button class="btn-blue button">More Info</button>
                 </div>
               </div>
             </div>
 
-            <div id="sharing" class="mt-5 tab-pane fade padding-x d-flex justify-content-between" role="tabpanel">
-              <img class="img-fluid" src="./app/images/illustration-features-tab-3.svg" />
-              <div class="w-50 d-flex flex-column justify-content-center">
-                <h3 class="w-75">Share your bookmarks</h3>
-                <p class="w-75">  Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-                <div>
+            <div id="searching" class="mt-5 d-flex justify-content-between" ng-show="searching" role="tabpanel">
+              <img class="img-fluid" src="./app/images/illustration-features-tab-2.svg" />
+              <div class="w-50 ml-5 d-flex flex-column justify-content-center">
+                <h3 class="w-75 mb-0">Intelligent search</h3>
+                <p class="w-75 mt-4 mb-0">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+                <div class="mt-4">
                   <button class="btn-blue button">More Info</button>
                 </div>
               </div>
-            </div> -->
+            </div>
+
+            <div id="sharing" class="mt-5 d-flex justify-content-between" ng-show="sharing" role="tabpanel">
+              <img class="img-fluid" src="./app/images/illustration-features-tab-3.svg" />
+              <div class="w-50 ml-5 d-flex flex-column justify-content-center">
+                <h3 class="w-75 mb-0">Share your bookmarks</h3>
+                <p class="w-75 mt-4 mb-0">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+                <div class="mt-4">
+                  <button class="btn-blue button">More Info</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="mt-5">
+      <section class="mt-6 d-inline-block w-100">
         <div class="container w-50 text-center">
           <h2>Download the extension</h2>
 
-          <p class="m-0">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+          <p class="m-0 w-75 m-auto">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
         </div>
 
         <div class="mt-5 container d-flex justify-content-center">
-          <div class="mb-6 card card-bg-img rounded-lg card-shadow justify-content-center align-items-center">
+          <div class="mb-6 card card-bg-img rounded-xl card-shadow justify-content-center align-items-center">
             <div class="w-100 p-4 d-flex flex-column align-items-center">
               <img src="./app/images/logo-chrome.svg" class="w-50 img-fluid" />
               <h4 class="mt-4 mb-0">Add to Chrome</h4>
@@ -123,7 +123,7 @@
             </div>
           </div>
 
-          <div class="mx-4 my-5 card card-bg-img rounded-lg card-shadow justify-content-center align-items-center">
+          <div class="mx-4 my-5 card card-bg-img rounded-xl card-shadow justify-content-center align-items-center">
             <div class="w-100 p-4 d-flex flex-column align-items-center">
               <img src="./app/images/logo-firefox.svg" class="w-50 img-fluid" />
               <h4 class="mt-4 mb-0">Add to Firefox</h4>
@@ -135,7 +135,7 @@
             </div>
           </div>
 
-          <div class="mt-6 card card-bg-img rounded-lg card-shadow justify-content-center align-items-center">
+          <div class="mt-6 card card-bg-img rounded-xl card-shadow justify-content-center align-items-center">
             <div class="w-100 p-4 d-flex flex-column align-items-center">
               <img src="./app/images/logo-opera.svg" class="w-50 img-fluid" />
               <h4 class="mt-4 mb-0">Add to Opera</h4>
@@ -148,7 +148,7 @@
           </div>     
       </section>
 
-      <section class="mt-5 container w-50 d-flex flex-column align-items-center">
+      <section class="mt-6 container w-50 d-flex flex-column align-items-center">
         <div class="text-center">
           <h2>Frequently Asked Questions</h2>
 
@@ -156,7 +156,7 @@
         </div>
 
         <div class="mt-5">
-          <div class="question-1">
+          <div class="d-inline-block w-100">
             <div class="question">
               <p class="w-100 m-0 red-onhover">What is Bookmark?</p>
               <button class="btn"><img src="./app/images/icon-arrow.svg" /></button>
@@ -167,7 +167,7 @@
             </div>
           </div>
 
-          <div class="question-1">
+          <div class="d-inline-block w-100">
             <div class="question">
               <p class="w-100 m-0 red-onhover">What is Bookmark?</p>
               <button class="btn"><img src="./app/images/icon-arrow.svg" /></button>
