@@ -1,7 +1,7 @@
 angular
 	.module('app')
-	.controller('TabController', function(){
+	.controller('tabController', function(){
 		var $ctrl = this;
 
-		
+
 	})
