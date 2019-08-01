@@ -24,5 +24,5 @@ angular
 			else {
 				$ctrl.errors.email = initialErrors;
 			}
-		}
+		};
 	})
