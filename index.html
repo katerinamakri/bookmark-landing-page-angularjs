@@ -216,10 +216,10 @@
 
           <h2 class="w-75 mt-4 mb-0">Stay up-to-date with what we’re doing</h2>
 
-          <form class="mt-5 d-flex justify-content-between" ng-submit="$ctrl.validation()" ng-controller="formController as $ctrl">
-            <div class="mr-3">
-              <input type="text" class="border-red input error-icon" name="email" ng-model="$ctrl.data.email" placeholder="Enter your email address" />
-              <p class="error-message" ng-if="$ctrl.data.email != null">{{ $ctrl.errors.email }}</p>
+          <form class="mt-5 d-flex justify-content-between" autocomplete="off" ng-submit="$ctrl.validation()" ng-controller="formController as $ctrl">
+            <div class="mr-3 position-relative">
+              <input type="text" class="input" name="email"  ng-class="{'border-red': ($ctrl.errors.email != null), 'error-icon': ($ctrl.errors.email != null)}" ng-model="$ctrl.data.email" placeholder="Enter your email address" />
+              <p class="error-message" ng-if="$ctrl.errors.email != null">{{ $ctrl.errors.email }}</p>
             </div>
             <div>
               <button class="button btn-red">Contact Us</button>  
