@@ -236,13 +236,25 @@
         <hr />
         
         <div>
-          <div class="d-flex justify-content-between align-items-center">
-            <p>Sorted (by name):</p>
-            <button class="button btn-blue" ng-click="$ctrl.sortByName()">Press to sort</button>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item" ng-repeat="item in $ctrl.names">{{ item.name }}</li>
-          </ul>
+          <p> Uppercase:</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="item in $ctrl.names | sort:'desc' ">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name | format:'uppercase' }}</td>
+                <td>{{ item.age }}</td>
+                <td>{{ item.gender }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <hr />
         
@@ -263,23 +275,6 @@
             </tbody>
           </table>
         </div>
-<!--         <hr />
-        <div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Age</th> 
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="item in $ctrl.names | filter:searchField">
-                <td>{{ item.name }}</td>
-                <td>{{ item.age }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>     -->    
       </section>
 
       <section class="advertisement">
@@ -332,5 +327,6 @@
   <script src="./app/js/tabController.js"></script>
   <script src="./app/js/formController.js"></script>
   <script src="./app/js/filterController.js"></script>
+  <script src="./app/js/filters.js"></script>
 </body>
 </html>

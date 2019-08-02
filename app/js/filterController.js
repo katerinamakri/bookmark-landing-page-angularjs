@@ -13,29 +13,18 @@ angular
 	// });
 
 
-	.controller('filterController', ['filterFilter', 'orderByFilter', function(filterFilter, orderBy) {
+	.controller('filterController', ['filterFilter', function(filterFilter) {
 		$ctrl = this;
 
 		$ctrl.names = [
-			{ name : 'George', gender : 'male', age : 42 },
-			{ name : 'Nick', gender : 'male', age : 28 },
-			{ name : 'Mary', gender : 'female', age : 13 },
-			{ name : 'Kate', gender: 'female', age : 55 },
-			{ name : 'Alexander', gender : 'male', age : 9 },
-			{ name : 'Margarita', gender : 'female', age : 72 }
+			{ id : 1 , name : 'George', gender : 'male', age : 42 },
+			{ id : 2 , name : 'Nick', gender : 'male', age : 28 },
+			{ id : 3 , name : 'Mary', gender : 'female', age : 13 },
+			{ id : 4 , name : 'Kate', gender: 'female', age : 55 },
+			{ id : 5 , name : 'Alexander', gender : 'male', age : 9 },
+			{ id : 6 , name : 'Margarita', gender : 'female', age : 72 }
 		];
 
 		$ctrl.filtered = filterFilter($ctrl.names, {gender:'female'});
 
-		// var defaultNames = angular.copy($ctrl.names);
-
-		$ctrl.propertyName = 'name';
-
-		$ctrl.sortByName = function() {
-			$ctrl.names = orderBy($ctrl.names, $ctrl.propertyName);
-		};
-
-		// $ctrl.length = 4;
-		// $ctrl.filteredByLength = minLengthFilter($ctrl.length);
-		// $ctrl.sorted = sortingFilter ($ctrl.names)
 	}])
